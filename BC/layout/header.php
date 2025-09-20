@@ -288,8 +288,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="viewVolunteer.php">
-                        <i class="bi bi-people"></i> <span>View Volunteer</span>
+                    <a class="nav-link" href="viewDistributor.php">
+                        <i class="bi bi-people"></i> <span>View Distributors</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="addDistributor.php">
+                        <i class="bi bi-people"></i> <span>Add Distributors</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -298,16 +303,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="viewContact.php">
-                        <i class="bi bi-people"></i> <span>View Contact</span>
+                    <a class="nav-link" href="sendLocation.php">
+                        <i class="bi bi-people"></i> <span>Send Live Location</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="changePassword.php">
-                        <i class="bi bi-cash-coin"></i> <span>Change Password</span>
-                    </a>
-                </li>
-
 
 
                 <li class="nav-item ">
@@ -319,6 +318,7 @@
         </div>
     </div>
 
+
     <!-- Offcanvas Sidebar for Mobile -->
     <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mobileSidebar">
         <div class="offcanvas-header">
@@ -327,10 +327,10 @@
         </div>
         <div class="offcanvas-body">
             <a href="dashboard.php">Dashboard</a>
-            <a href="viewVolunteer.php">View Volunteer</a>
+            <a href="viewDistributor.php">View Distributor</a>
             <a href="viewClient.php">View Clients</a>
-            <a href="viewContact.php">View Contact</a>
-            <a href="changePassword.php">Change Password</a>
+            <a href="addDistributor.php">Add Distributor</a>
+            <a href="sendLocation.php">Send Location</a>
             <a href="">Logout</a>
         </div>
     </div>

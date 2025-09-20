@@ -29,11 +29,12 @@
 
         /* Sidebar Styling */
         #sidebar {
+            width: 250px;
+            height: 100vh;
             background-color: var(--sidebar);
             color: white;
-            height: 100vh;
             position: fixed;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
             z-index: 1000;
         }
 
@@ -75,9 +76,9 @@
         /* Main Content */
         #content {
             margin-left: 250px;
-            transition: all 0.3s;
             padding: 20px;
             min-height: 100vh;
+            transition: all 0.3s ease;
         }
 
         /* Topbar */
@@ -197,45 +198,78 @@
             flex-grow: 1;
         }
 
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            #sidebar {
-                width: 80px;
-                text-align: center;
-            }
-
-            #sidebar .nav-link span {
-                display: none;
-            }
-
-            #sidebar .nav-link i {
-                margin-right: 0;
-                font-size: 1.2rem;
-            }
-
-            #content {
-                margin-left: 80px;
-            }
+        /* Progress Bar */
+        .progress {
+            height: 8px;
+            margin-top: 5px;
         }
 
-        @media (max-width: 576px) {
+        /* Responsive Design */
+        @media (max-width: 768px) {
             #sidebar {
-                width: 0;
-                overflow: hidden;
+                display: none;
             }
 
             #content {
                 margin-left: 0;
             }
+        }
 
+        @media (max-width: 576px) {
             .topbar .col-md-6 {
                 margin-bottom: 10px;
             }
+
+            .dashboard-card .card-icon {
+                font-size: 2rem;
+                right: 15px;
+                top: 15px;
+            }
         }
 
-        .progress {
-            height: 8px;
-            margin-top: 5px;
+
+        /* Mobile Offcanvas Sidebar */
+        .offcanvas-start {
+            width: 250px;
+            background-color: var(--sidebar);
+            /* Use same color as main sidebar */
+            color: white;
+        }
+
+        .offcanvas-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+        }
+
+        .offcanvas-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .offcanvas-body {
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .offcanvas-body a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .offcanvas-body a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .btn-close-white {
+            filter: invert(1);
+            /* Ensures white close button is visible */
         }
     </style>
 </head>
@@ -254,16 +288,20 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="view.php">
-                        <i class="bi bi-people"></i> <span>View</span>
+                    <a class="nav-link" href="viewClient.php">
+                        <i class="bi bi-people"></i> <span>View Client</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="password.php">
-                        <i class="bi bi-cash-coin"></i> <span>Change Password</span>
+                    <a class="nav-link" href="addClient.php">
+                        <i class="bi bi-people"></i> <span>Add Client</span>
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="sendLocation.php">
+                        <i class="bi bi-people"></i> <span>Send Live Location</span>
+                    </a>
+                </li>
 
 
                 <li class="nav-item ">
@@ -272,5 +310,21 @@
                     </a>
                 </li>
             </ul>
+        </div>
+    </div>
+
+
+    <!-- Offcanvas Sidebar for Mobile -->
+    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mobileSidebar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Helping Hand</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a href="dashboard.php">Dashboard</a>
+            <a href="viewClient.php">View Clients</a>
+            <a href="addClient.php">Add Client</a>
+            <a href="sendLocation.php">Send Location</a>
+            <a href="">Logout</a>
         </div>
     </div>

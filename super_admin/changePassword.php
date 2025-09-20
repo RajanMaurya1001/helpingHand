@@ -1,6 +1,7 @@
 <?php
 include('layout/header.php');
 ?>
+
 <style>
     /* Password Form Styling */
     form {
@@ -57,8 +58,8 @@ include('layout/header.php');
     }
 </style>
 
-<!-- Main Content -->
 <div id="content">
+
     <!-- Topbar -->
     <div class="topbar">
         <div class="container-fluid">
@@ -69,12 +70,10 @@ include('layout/header.php');
                         <button class="btn btn-primary d-md-none m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
                             <i class="bi bi-list"></i>
                         </button>
-
-
-
                     </div>
                 </div>
                 <div class="col-6 d-flex justify-content-end">
+
                     <div class="dropdown">
                         <a class="d-flex align-items-center text-decoration-none" href="#" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Admin" width="40" height="40" class="rounded-circle me-2">
@@ -84,7 +83,7 @@ include('layout/header.php');
                             </div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="profile.php"><i class="fas fa-user me-2"></i> My Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i> My Profile</a></li>
                             <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i> Settings</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -92,58 +91,39 @@ include('layout/header.php');
                             <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Dashboard Content -->
-    <div class="container-fluid">
-        <!-- Page Title -->
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="mb-0">Dashboard</h2>
 
+
+
+
+
+    <div class="container d-flex justify-content-center align-items-center mt-5">
+        <div class="card shadow rounded" style="width: 100%; max-width: 500px;">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0">Change Password Form</h5>
+            </div>
+            <div class="card-body">
+                <form action="change_password.php" method="POST">
+                    <div class="mb-3">
+                        <label for="newPassword" class="form-label">New Password</label>
+                        <input type="password" class="form-control" id="newPassword" name="new_password" placeholder="Enter new password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Update Password</button>
+                </form>
+            </div>
         </div>
-
-        <!-- Stats Cards -->
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="card dashboard-card card-1">
-                    <div class="card-body">
-                        <i class="bi bi-cash-coin card-icon"></i>
-                        <h5 class="card-title">Total Volunteer</h5>
-                        <h2 class="card-text">$42,580</h2>
-                        <p class="small">+12% from last month</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="card dashboard-card card-2">
-                    <div class="card-body">
-                        <i class="bi bi-people card-icon"></i>
-                        <h5 class="card-title">Total Client</h5>
-                        <h2 class="card-text">2,458</h2>
-                        <p class="small">+8% from last month</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="card dashboard-card card-3">
-                    <div class="card-body">
-                        <i class="bi bi-person-badge card-icon"></i>
-                        <h5 class="card-title">Total Contact</h5>
-                        <h2 class="card-text">184</h2>
-                        <p class="small">+15 new this month</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
     </div>
+
+
+
 </div>
 
 
 <?php
-include('layout/footer.php');
+include('layout/footer.php')
 ?>

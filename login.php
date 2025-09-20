@@ -59,7 +59,7 @@
                 <button type="submit" class="btn btn-primary w-100">Login</button>
 
                 <p class="mt-3 text-center">
-                    <a href="#">Forgot Password?</a>
+                    <a href="forgetPassword.php">Forgot Password?</a>
                 </p>
             </form>
         </div>

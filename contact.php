@@ -484,6 +484,53 @@
             }
         }
     </style>
+
+    <style>
+        .contact-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .form-control:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+        }
+
+        .btn-custom {
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 30px;
+            padding: 10px 25px;
+            transition: background 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #2980b9;
+        }
+
+        .contact-info i {
+            color: #3498db;
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .map-container {
+                margin-top: 30px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -539,114 +586,58 @@
     </nav>
 
 
-
-    <!-- Hero Section -->
-    <section>
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/images/ChatGPT Image Jun 11, 2025, 06_06_55 PM.png" class="d-block w-100" alt="..." height="500px">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/images/pic03.jpg" class="d-block w-100" alt="..." height="500px">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/images/pic04.jpg" class="d-block w-100" alt="..." height="500px">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </section>
-
-    <!-- <section>
-        <?php include('slider.php') ?>
-    </section> -->
-    <!-- About Section -->
-    <section class="about">
+    <!-- Contact Section -->
+    <section class="contact-section">
         <div class="container">
             <div class="section-title">
-                <h2>About Helping Hand</h2>
+                <h2>Get in Touch</h2>
+                <p>We'd love to hear from you. Fill out the form or contact us directly.</p>
             </div>
-            <div class="row align-items-center">
+            <div class="row g-4 pb-3" style="background-color: #ecf0f1;">
+                <!-- Contact Form -->
                 <div class="col-lg-6">
-                    <div class="about-text">
-                        <h2>We are committed to making the world a better place</h2>
-                        <p>Helping Hand is a pioneering initiative committed to saving lives and improving road safety through smart, immediate, and accessible accident assistance.
-                        </p>
-                        <p>We specialize in providing rapid response support in road accidents using our innovative QR code-based emergency system. Our unique solution empowers bystanders to become first responders—by simply scanning a QR code available on vehicles, helmets, or personal items, anyone can instantly access vital emergency information and connect with local emergency services, family members, or medical contacts.
-                        </p>
-                        <p>At Helping Hand, we bridge the critical gap between the moment of an accident and the arrival of help, ensuring that no life is lost due to delays or confusion. Our technology is designed to be simple, fast, and reliable—because in emergencies, every second counts.
-                        </p>
-
-                        <p>In addition to our emergency support system, we actively promote road safety awareness, responsible driving behavior, and community training programs to reduce accidents and foster a culture of care on the roads.
-                        </p>
-
-                        <p>We believe that technology, when combined with compassion, can transform how we respond to road accidents. With Helping Hand, help is never far away—it’s just a scan away.</p>
-
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" alt="Helping Hand Team" class="img-fluid rounded shadow">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>We Safety Warrier</h2>
-            </div>
-            <div class="row">
-                <div class="container my-5">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <h4 class="mb-4">Registration Form</h4>
-                            <form action="submit.php" method="POST">
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="name" class="form-label">Full Name</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="email" class="form-label">Email Address</label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="phone" class="form-label">Phone Number</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="9876543210" required>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password" name="password" placeholder="Create password" required>
-                                    </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
-                                </div>
-
-                                <button type="submit" class="btn w-100 text-white" style="background-color: #2ecc71;">Register</button>
-                            </form>
+                    <form action="" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required />
                         </div>
-                    </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom">Send Message</button>
+                    </form>
                 </div>
 
+                <!-- Contact Info -->
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <h3>Contact Information</h3>
+                        <p>You can also reach us via phone, email, or drop by our office.</p>
+                        <ul class="list-unstyled contact-info">
+                            <li class="mb-3"><i class="fas fa-map-marker-alt"></i> Gorakhpur, Uttar Preadesh (273001), India</li>
+                            <li class="mb-3"><i class="fas fa-phone"></i> 011 69269 569</li>
+                            <li class="mb-3"><i class="fas fa-envelope"></i> helpinghandqr@gmail.com</li>
+
+                        </ul>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.1873154094906!2d83.375029374889!3d26.738397967560978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399145651997fe19%3A0x93a58584274bf944!2sPurvi%20Hospital!5e0!3m2!1sen!2sin!4v1750678140599!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+
 
     <!-- Footer -->
     <footer>
@@ -655,7 +646,8 @@
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                     <div class="footer-column">
                         <h3>Helping Hand</h3>
-                        <p>Because Every Life Deserves <br> a Helping Hand.</p>
+                        <p>Because Every Life Deserves<br>
+                            a Helping Hand.</p>
                         <div class="social-links">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -670,7 +662,7 @@
                         <ul class="footer-links">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About Us</a></li>
-                            <li><a href="blog.php">Blog</a></li>
+                            <li><a href="#">Blog</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul>
                     </div>

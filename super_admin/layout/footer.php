@@ -3,18 +3,30 @@
 
 <script>
     // Toggle sidebar on mobile
-    document.getElementById('sidebarToggle').addEventListener('click', function() {
+    // document.getElementById('sidebarToggle').addEventListener('click', function() {
+    //     const sidebar = document.getElementById('sidebar');
+    //     const content = document.getElementById('content');
+
+    //     if (sidebar.style.width === '0px' || sidebar.style.width === '') {
+    //         sidebar.style.width = '250px';
+    //         content.style.marginLeft = '250px';
+    //     } else {
+    //         sidebar.style.width = '0';
+    //         content.style.marginLeft = '0';
+    //     }
+    // });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleBtn = document.getElementById('sidebarToggle');
         const sidebar = document.getElementById('sidebar');
         const content = document.getElementById('content');
 
-        if (sidebar.style.width === '0px' || sidebar.style.width === '') {
-            sidebar.style.width = '250px';
-            content.style.marginLeft = '250px';
-        } else {
-            sidebar.style.width = '0';
-            content.style.marginLeft = '0';
-        }
+        toggleBtn.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+            content.classList.toggle('expanded');
+        });
     });
+
 
     // Initialize charts
     document.addEventListener('DOMContentLoaded', function() {

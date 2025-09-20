@@ -57,24 +57,21 @@ include('layout/header.php');
     }
 </style>
 
-<!-- Main Content -->
 <div id="content">
+
     <!-- Topbar -->
     <div class="topbar">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-6">
                     <div class="d-flex align-items-center">
-                        <!-- Toggle Button (visible only on mobile) -->
-                        <button class="btn btn-primary d-md-none m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+                        <button class="btn btn-outline-secondary me-3 d-md-none" id="sidebarToggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
                             <i class="bi bi-list"></i>
                         </button>
-
-
-
                     </div>
                 </div>
                 <div class="col-6 d-flex justify-content-end">
+
                     <div class="dropdown">
                         <a class="d-flex align-items-center text-decoration-none" href="#" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Admin" width="40" height="40" class="rounded-circle me-2">
@@ -84,7 +81,7 @@ include('layout/header.php');
                             </div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="profile.php"><i class="fas fa-user me-2"></i> My Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i> My Profile</a></li>
                             <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i> Settings</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -92,58 +89,69 @@ include('layout/header.php');
                             <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Dashboard Content -->
-    <div class="container-fluid">
-        <!-- Page Title -->
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="mb-0">Dashboard</h2>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow rounded">
+                    <div class="card-header bg-dark text-white">
+                        <h5 class="mb-0">Add Distributor</h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="POST">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">Distributor Name</label>
+                                    <input type="text" class="form-control" id="firstName" name="first_name" placeholder="Enter first name" required>
+                                </div>
 
+                                <div class="col-md-6 mb-3">
+                                    <label for="fatherName" class="form-label">Owner Name</label>
+                                    <input type="text" class="form-control" id="fatherName" name="fatherName" placeholder="Enter first name" required>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="example@mail.com" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Owner Phone Number 1</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="9876543210" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Owner Phone Number 2</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="9876543210" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="company" class="form-label">Company Name</label>
+                                    <input type="tel" class="form-control" id="company" name="company" placeholder="Bajaj" required>
+                                </div>
+
+
+
+
+                            </div>
+
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Stats Cards -->
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="card dashboard-card card-1">
-                    <div class="card-body">
-                        <i class="bi bi-cash-coin card-icon"></i>
-                        <h5 class="card-title">Total Volunteer</h5>
-                        <h2 class="card-text">$42,580</h2>
-                        <p class="small">+12% from last month</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="card dashboard-card card-2">
-                    <div class="card-body">
-                        <i class="bi bi-people card-icon"></i>
-                        <h5 class="card-title">Total Client</h5>
-                        <h2 class="card-text">2,458</h2>
-                        <p class="small">+8% from last month</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="card dashboard-card card-3">
-                    <div class="card-body">
-                        <i class="bi bi-person-badge card-icon"></i>
-                        <h5 class="card-title">Total Contact</h5>
-                        <h2 class="card-text">184</h2>
-                        <p class="small">+15 new this month</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
     </div>
+
+
+
 </div>
 
 
 <?php
-include('layout/footer.php');
+include('layout/footer.php')
 ?>
